@@ -1,27 +1,11 @@
-# -*- coding: utf-8 -*-
-# UTF-8 encoding when using korean
-line_01 = list(input())
-line_02 = list(input())
-line_03 = list(input())
-line_04 = list(input())
-line_05 = list(input())
+from tkinter import *
+import time
+window = Tk()
+choice = IntVar()
+Label(window, text="가장 선호하는 프로그래밍 언어를 선택하시오", justify = LEFT, padx = 20).pack()
+Radiobutton(window, text="Python", padx = 20, variable=choice, value=1).pack(anchor=W)
+Radiobutton(window, text="C", padx = 20, variable=choice, value=2).pack(anchor=W)
+Radiobutton(window, text="Java", padx = 20, variable=choice, value=3).pack(anchor=W)
+Radiobutton(window, text="Swift", padx = 20, variable=choice, value=4).pack(anchor=W)
 
-output = ''
-
-for i in range(15):
-    if line_01:
-        output = output + line_01.pop(0)
-
-    if line_02:
-        output = output + line_02.pop(0)
-
-    if line_03:
-        output = output + line_03.pop(0)
-
-    if line_04:
-        output = output + line_04.pop(0)
-
-    if line_05:
-        output = output + line_05.pop(0)
-
-print(output)
+window.mainloop()
